@@ -3,15 +3,15 @@
 <head>
 <style>
     .logo{
-  color:rgb(44, 114, 47);
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-  display: inline;
+    color:rgb(44, 114, 47);
+    font-family: Arial, Helvetica, sans-serif ;
+    display: inline;
      }
 
      .sub-heading{
     font-size: 4rem;
     /* Large font size */
-    color: rgbrgb(239, 165, 75);
+    color:rgb(239, 165, 75);
      /* Dark blue color */
     text-align: center;
     /* Center the text */
@@ -26,6 +26,30 @@
     display: inline-block;
     display: block;
       }
+
+      img{
+  display: inline;
+  height: 50px;
+  width: 50px;
+   max-width: 100%; 
+   max-height:100%;
+}   
+
+.process-heading{
+  color:rgb(70, 136, 46) ;
+}
+
+.list-content{
+  color: white;
+}
+
+.yellow-heading{
+color: rgb(239, 165, 75);
+}
+
+
+
+
 
 .box-group{
     text-align: center;
@@ -60,65 +84,40 @@ z-index:-1;
 rect {
   position: relative;
   z-index: 1;
- }
-
-
- .process-heading {
-         color: rgb(44, 114, 47);
-         font: size 25px;
-         text-transform: uppercase;
-         text-align: justify;
-         font-family: Arial, Helvetica, sans-serif;
-         }
-
-
-
-img{
-  display: inline;
-  height: 50px;
-  width: 50px;
-   max-width: 100%; 
-   max-height:100%;
-} 
-
-.list-content{
-  color:white;
-  font-background:none
-	
-	
-}	
+ }      
 </style>
 
 
 </head>
 
 
-<body>
-
+<body bgcolor="black">
 <div class="header">
-    <img src="https://cdn-icons-png.flaticon.com/512/4661/4661148.png">
-    <h1 class="logo">Smart Select</h1>
-  </div> 
+  <img src="https://cdn-icons-png.flaticon.com/512/4661/4661148.png">
+  <h1 class="logo">Smart Select</h1>
+</div> 
   
+ 
 <header class="sub-heading">Alps Soap Data</header>
  <h2 class="process-heading">
     Raw Material Extraction:
  
     <ul class="list-content">
 <li>Ingredients: Organic Shea Butter, Blue-Green Algae Extract, Volcanic Sand, Witch Hazel Extract.</li>
-<li>Estimated Emissions:
-    Shea Butter: 0.5 kg CO₂e per kg
-    Blue-Green Algae: 0.3 kg CO₂e per kg
-    Volcanic Sand: 0.1 kg CO₂e per kg
-    Witch Hazel: 0.2 kg CO₂e per kg</li>
+<p class="list-content">Estimated Emissions:
+    <li>Shea Butter: 0.5 kg CO₂e per kg</li>
+    <li>Blue-Green Algae: 0.3 kg CO₂e per kg</li>
+    <li>Volcanic Sand: 0.1 kg CO₂e per kg</li>
+    <li>Witch Hazel: 0.2 kg CO₂e per kg</li>
 
-    <p>Assuming the following quantities for a batch of 1000 soaps (150g each)
-<li>Shea Butter: 0.5 kg CO₂e per kg
-    Blue-Green Algae: 0.3 kg CO₂e per kg
-    Volcanic Sand: 0.1 kg CO₂e per kg
-    Witch Hazel: 0.2 kg CO₂e per kg</li>
-    </ul>
- <p> Total Emisions for Raw Materials:<br>
+    <p class="list-content">Assuming the following quantities for a batch of 1000 soaps (150g each)
+<li>Shea Butter: 0.5 kg CO₂e per kg</li>
+<li>Blue-Green Algae: 0.3 kg CO₂e per kg</li>
+<li>Volcanic Sand: 0.1 kg CO₂e per kg</li>
+<li>Witch Hazel: 0.2 kg CO₂e per kg</li>
+</ul>
+
+ <p class="list-content"> Total Emisions for Raw Materials:<br>
 Total=(30×0.5)+(15×0.3)+(10×0.1)+(20×0.2)=15+4.5+1+4=24.5 kg CO e
 <br>
 </h2>
@@ -128,8 +127,8 @@ Total=(30×0.5)+(15×0.3)+(10×0.1)+(20×0.2)=15+4.5+1+4=24.5 kg CO e
     Manufacturing:
 <ul class="list-content">
 <li>Energy Use: Assume energy consumption results in emissions of about 1 kg CO₂e per soap.</li>
-<li>Total Emissions for Manufacturing:<br>
-Total=1000×1=1000 kg CO e</li>
+<p class="list-content">Total Emissions for Manufacturing:<br>
+Total=1000×1=1000 kg CO e
 </ul>
 </h2>
 
@@ -139,13 +138,13 @@ Total=1000×1=1000 kg CO e</li>
 <ul class="list-content">
 <li>Materials: Recycled cardboard box and biodegradable wrapping.</li>
 
-<li>Estimated Emissions:
-    Cardboard: 0.2 kg CO₂e per box
-    Biodegradable wrap: 0.05 kg CO₂e per soap</li>
+<li>Estimated Emissions:</li>
+<li>Cardboard: 0.2 kg CO₂e per box</li>
+<li></li>Biodegradable wrap: 0.05 kg CO₂e per soap</li>
     <p>Assuming each box contains ten soaps:
 <li>Total boxes needed: 100</li>
-<li>Total emissions from packaging:</li><br>
-<p>Total=(100×0.2)+(1000×0.05)=20+50=70 kg CO e
+<p class="list-content">Total emissions from packaging:<br>
+Total=(100×0.2)+(1000×0.05)=20+50=70 kg CO e
 </ul>
 </h2>
 
@@ -154,8 +153,8 @@ Total=1000×1=1000 kg CO e</li>
 <ul class="list-content">
     <li>Transport Method: Truck transport over an average distance of 500 km.</li>
 <li>Transport Method: Truck transport over an average distance of 500 km.</li>
-<li>Total emissions from Distribution:</li><br>
-<p>Total=1000×0.1=100 kg CO e
+<p class="list-content">Total emissions from Distribution:<br>
+Total=1000×0.1=100 kg CO e
 </ul>
 </h2>
 
@@ -165,28 +164,30 @@ Total=1000×1=1000 kg CO e</li>
 <li>Consumer Use: Average use of one bar lasts for about two months with daily use.</li>
 <li>Estimated Emissions: Assume emissions from water heating and other factors are negligible at around 0.01 kg CO₂e per wash.
     Assuming one wash daily for two months (60 washes):</li>
-    <li>Total emissions from usage:</li><br>
-    <p>Total=60×0.01=0.6 kg CO e
+    <p class="list-content">Total emissions from usage:<br>
+    Total=60×0.01=0.6 kg CO e
 </ul>
 </h2>
 
 <h2 class="process-heading">
     Disposal:
-<ul class="list-content">
+<ul>
     <li>End-of-Life Scenario: Assuming the soap is composted or disposed of in a landfill.</li>
     <li>Estimated Emissions: Assume emissions from disposal are around 0.05 kg CO₂e per soap.</li>
-    <li>Total emissions from disposal:</li><br>
-    <p>Total=1000×0.05=50 kg CO e
-</ul>	    
+    <p class="list-content">Total emissions from disposal:<br>
+</ul>    
+    <p class="list-content">Total=1000×0.05=50 kg CO e
 </h2>
 
+<h1 class="yellow-heading">Overall Carbon Footprint Calculation</h1>
+  
  
-
-<h1 class="sub-heading">Overall Carbon Footprint Calculation</h1>
-<p>Now, summing all the emissions from each stage:<br>
-    Total Carbon Footprint= Raw Materials+ Manufacturing + Packaging + Distribution +
-    Use Phase + Disposal<br>
-</p>
+ <h2 class="process-heading">Now, summing all the emissions from each stage:<br>
+  
+  <p class="list-content">Total Carbon Footprint= Raw Materials+ Manufacturing + Packaging + Distribution +
+      Use Phase and Cooking + Disposal<br>
+      <br>
+      <p class="list-content">Thus, the total cradle-to-grave carbon footprint for a Alps Soap bar is approximately <i>1,245.1 kg CO2</i> equivalent per bar.     
 
 <div class="wrapper">
     <div class="svg-container">
@@ -194,7 +195,7 @@ Total=1000×1=1000 kg CO e</li>
         
         <defs>
           <marker id="arrow" markerWidth="4" markerHeight="10" viewBox="-2 -4 4 4" refX="0" refY="0" markerUnits="strokeWidth" orient="auto">
-            <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill=" rgb(239, 165, 75)"/>
+            <polyline points="2,-2 0,0 2,2" stroke="#443c3d" stroke-width="0.75px" fill="rgb(70, 136, 46)"/>
           </marker>
       </defs>
      
@@ -202,7 +203,7 @@ Total=1000×1=1000 kg CO e</li>
         <g class="box-group">
           <g transform="translate(-5)">
               <circle fill="#000" cx="55" cy="50" r="45" opacity="1" />
-            <text x="28" y="58" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="#f5f3e7" font-weight="100" style="text-transform:uppercase; letter-spacing: 1px">Raw Material Extraction</text>
+            <text x="28" y="58" font-family="Open Sans Condensed" font-size="10" stroke="none" fill="rgb(70, 136, 46)" font-weight="100" style="text-transform:uppercase; letter-spacing: 1px">Raw Material Extraction</text>
             <line x1="102" x2="135" y1="50" y2="50" stroke-width="2" stroke="#443c3d" stroke-dasharray="2,1" />
           </g>
             
