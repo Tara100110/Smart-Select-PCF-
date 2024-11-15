@@ -32,7 +32,7 @@
     }
 
     .banner {
-      background-image: url(cottage\ core\ raspberry\ desktop\ wallpaper\ copy\ 2.jpg);
+      background-image: url('images/cottage-core-raspberry.jpg'); /* Corrected path */
       width: 100%;
       height: fit-content;
       border: 5px solid rgba(55, 67, 34, 1);
@@ -70,19 +70,28 @@
       width: 60%;
     }
 
-    /* Increase product name font size and make them bold */
     .chart-container canvas {
       font-size: 16px;
-    }
-
-    /* Add custom styles for the product names */
-    .chart-container canvas {
       font-weight: bold;
+      color: #333;
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
     }
 
-    .chart-container canvas {
-      color: #333; /* Dark color for product names */
-      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Light shadow for better contrast */
+    /* Learn More button styles */
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      color: white;
+      background-color: rgba(55, 67, 34, 1);
+      text-align: center;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    button:hover {
+      background-color: rgba(55, 67, 34, 0.8);
     }
 
   </style>
@@ -99,6 +108,9 @@
 
   <header class="main-heading">Comparing Shimmer Blush</header>  
 
+  <!-- Learn More button -->
+  <a href="data/product6.html"><button>Learn More</button></a>
+
   <div class="container">
     <div class="chart-container">
       <h1>Product Carbon Footprint Chart</h1>
@@ -106,7 +118,7 @@
       <canvas id="carbonChart"></canvas>
     </div>
     <!-- Image next to the chart -->
-    <img src="C:\Users\POOJA\Downloads\shimmer.jpg" alt="Shimmer Blush Image">
+    <img src="images/shimmer.jpg" alt="Shimmer Blush Image"> <!-- Updated image path -->
   </div>
 
   <script>
