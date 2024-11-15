@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Carbon Footprint Chart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: rgb(12, 16, 13);
+    }
+
+    .main-heading {
+      font-size: 4rem;
+      color: white;
+      text-align: center;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(55, 67, 34, 1);
+      font-family: Silkscreen;
+      transition: transform 0.3s ease;
+      display: block;
+    }
+
+    .logo {
+      color: white;
+      font-family: Geostar_Fill;
+      text-align: left;
+      font-family: Silkscreen;
+      text-shadow: rgba(55, 67, 34, 1);
+    }
+
+    .banner {
+      background-image: url(cottage\ core\ raspberry\ desktop\ wallpaper\ copy\ 2.jpg);
+      width: 100%;
+      height: fit-content;
+      border: 5px solid rgba(55, 67, 34, 1);
+      border-radius: 2.5px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 80%;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img {
+      height: 400px;
+      width: auto;
+      margin-left: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgba(130, 146, 58, 1);
+      font-size: 35px;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 400px;
+      width: 60%;
+    }
+
+    /* Increase product name font size and make them bold */
+    .chart-container canvas {
+      font-size: 16px;
+    }
+
+    /* Add custom styles for the product names */
+    .chart-container canvas {
+      font-weight: bold;
+    }
+
+    .chart-container canvas {
+      color: #333; /* Dark color for product names */
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Light shadow for better contrast */
+    }
+
+  </style>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+  <div class="banner">  
+    <h1 class="logo">Smart Select</h1>
+  </div>
+
+  <header class="main-heading">Comparing Shimmer Blush</header>  
+
+  <div class="container">
+    <div class="chart-container">
+      <h1>Product Carbon Footprint Chart</h1>
+      <!-- Chart container -->
+      <canvas id="carbonChart"></canvas>
+    </div>
+    <!-- Image next to the chart -->
+    <img src="C:\Users\POOJA\Downloads\shimmer.jpg" alt="Shimmer Blush Image">
+  </div>
+
+  <script>
+    // Example data for product carbon footprints (values in kg CO2)
+    const products = [
+      { name: 'Shimmer', carbonFootprint: 0.67 },  
+      { name: 'Kymaa', carbonFootprint: 0.446 },         
+      { name: 'Elizabeths Secret', carbonFootprint: 0.776},
+      { name: 'Unique Beauty', carbonFootprint: 1.37 }
+    ];
+
+    // Prepare the data for the chart
+    const productNames = products.map(product => product.name);
+    const carbonFootprints = products.map(product => product.carbonFootprint);
+
+    // Create the chart
+    const ctx = document.getElementById('carbonChart').getContext('2d');
+    const carbonChart = new Chart(ctx, {
+      type: 'bar',  // Bar chart type
+      data: {
+        labels: productNames,
+        datasets: [{
+          label: 'Carbon Footprint (kg CO2)',
+          data: carbonFootprints,
+          backgroundColor: 'rgba(76, 175, 80, 0.7)',  // Green background color
+          borderColor: 'rgba(76, 175, 80, 1)',  // Green border color
+          borderWidth: 1,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Products',
+              font: {
+                size: 18,    // Larger font for x-axis title
+                weight: 'bold'
+              }
+            },
+            grid: {
+              display: false
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Carbon Footprint (kg CO2)',
+              font: {
+                size: 18,    // Larger font for y-axis title
+                weight: 'bold'
+              }
+            },
+            beginAtZero: true,  // Start Y axis from zero
+            grid: {
+              display: true
+            }
+          }
+        },
+        plugins: {
+          tooltip: {
+            enabled: true,
+            callbacks: {
+              label: function(tooltipItem) {
+                return tooltipItem.dataset.label + ': ' + tooltipItem.raw.toFixed(2) + ' kg CO2';
+              }
+            }
+          }
+        },
+        animation: {
+          duration: 1500,  // Smooth animation
+          easing: 'easeOutBounce'  // Easing function for animation
+        }
+      }
+    });
+
+  </script>
+
+</body>
+</html>
