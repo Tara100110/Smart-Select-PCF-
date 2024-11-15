@@ -1,170 +1,180 @@
-<html>
-<title>Smart Select</title>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-/* Basic styles */
-body {
-  background-color: rgb(12, 16, 13);
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Select</title>
 
-.banner {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  margin-inline: auto;
-  border: 5px solid rgba(55, 67, 34, 1);
-  border-radius: 2.5px;
-  box-sizing: border-box;
-  overflow: hidden; /* Ensure no overflow of content */
-}
+    <style>
+    /* Basic styles */
+    body {
+        background-color: rgb(12, 16, 13);
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
 
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: 'Silkscreen', sans-serif; /* Pixelated retro font */
-  font-size: 100px; /* Adjusted font size */
-  font-weight: normal;
-  text-align: center;
-  z-index: 1;
-  white-space: nowrap; /* Prevent wrapping of the title */
-  letter-spacing: 3px; /* Adjusted letter-spacing */
-  animation: typing 3s steps(20) 1s forwards, blink 0.8s step-end infinite;
-}
+    .banner {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        margin-inline: auto;
+        border: 5px solid rgba(55, 67, 34, 1);
+        border-radius: 2.5px;
+        box-sizing: border-box;
+        overflow: hidden; /* Ensure no overflow of content */
+    }
 
-.background {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  filter: blur(4px); /* Blur to make the text pop */
-}
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: 'Silkscreen', sans-serif; /* Pixelated retro font */
+        font-size: 100px; /* Adjusted font size */
+        font-weight: normal;
+        text-align: center;
+        z-index: 1;
+        white-space: nowrap; /* Prevent wrapping of the title */
+        letter-spacing: 3px; /* Adjusted letter-spacing */
+        animation: typing 3s steps(20) 1s forwards, blink 0.8s step-end infinite;
+    }
 
-.main-heading {
-  font-size: 4rem; /* Adjusted for responsive scaling */
-  color: rgba(130, 146, 58, 1);
-  text-align: center;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(55, 67, 34, 1); /* Soft shadow effect */
-  font-family: Silkscreen;
-  transition: transform 0.3s ease;
-  display: block;
-}
+    .background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        filter: blur(4px); /* Blur to make the text pop */
+    }
 
-.description-1 {
-  color: white;
-  text-align: center;
-  text-transform: capitalize;
-  font-family: 'Bruno_Ace', sans-serif;
-  font-size: medium;
-  border: 1px solid rgba(55, 67, 34, 1);
-  border-radius: 2.5px;
-  box-sizing: border-box;
-  margin: 10px;
-  height: auto;
-  width: 100%;
-  background-color: rgba(55, 67, 34, 1);
-  align-items: center;
-}
+    .main-heading {
+        font-size: 4rem; /* Adjusted for responsive scaling */
+        color: rgba(130, 146, 58, 1);
+        text-align: center;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 4px rgba(55, 67, 34, 1); /* Soft shadow effect */
+        font-family: Silkscreen;
+        transition: transform 0.3s ease;
+        display: block;
+    }
 
-.sub-heading {
-  color: rgba(130, 146, 58, 1);
-  font-size: 35px; /* Corrected font size */
-  text-align: center;
-  font-family: 'Silkscreen', sans-serif;
-}
+    .description-1 {
+        color: white;
+        text-align: center;
+        text-transform: capitalize;
+        font-family: 'Bruno_Ace', sans-serif;
+        font-size: medium;
+        border: 1px solid rgba(55, 67, 34, 1);
+        border-radius: 2.5px;
+        box-sizing: border-box;
+        margin: 10px;
+        height: auto;
+        width: 100%;
+        background-color: rgba(55, 67, 34, 1);
+        align-items: center;
+    }
 
-/* Flexbox layout for div1 and div2 */
-.div-container {
-  display: flex;
-  justify-content: flex-start; /* Align items to the left */
-  margin-top: 20px;
-  padding: 10px;
-}
+    .sub-heading {
+        color: rgba(130, 146, 58, 1);
+        font-size: 35px; /* Corrected font size */
+        text-align: center;
+        font-family: 'Silkscreen', sans-serif;
+    }
 
-.div1 {
- 
-  display: flex;
-  justify-content: flex-start; /* Ensure div1 is aligned left */
-  flex: 1; /* Allow div1 to take up available space */
-}
+    /* Flexbox layout for div1 and div2 */
+    .div-container {
+        display: flex;
+        justify-content: flex-start; /* Align items to the left */
+        margin-top: 20px;
+        padding: 10px;
+    }
 
-.div1-baby {
-  background-image:url(download.jpg);  
-  width: 500px;
-  height: 570px;
-  border: 5px solid rgba(55, 67, 34, 1);
-  border-radius: 2.5px;
-  box-sizing: border-box;
-  margin-left: 10px;
-}
+    .div1 {
+        display: flex;
+        justify-content: flex-start; /* Ensure div1 is aligned left */
+        flex: 1; /* Allow div1 to take up available space */
+    }
 
-.div2 {
-  display: flex;
-  flex-direction: column; /* Stack the items vertically */
-  justify-content: space-between; /* Distribute items vertically with space between */
-  flex: 2; /* Allow div2 to take up more space */
-  margin-left: 20px; /* Space between div1 and div2 */
-}
+    .div1-baby {
+        background-image: url('images/download.jpg');  
+        width: 500px;
+        height: 570px;
+        border: 5px solid rgba(55, 67, 34, 1);
+        border-radius: 2.5px;
+        box-sizing: border-box;
+        margin-left: 10px;
+    }
 
-.div2 > div {
-  width: 100%; /* Make the width of each box 100% of the container */
-  height: 33.33%; /* Make each box take up 1/3 of the vertical space */
-  border: 5px solid rgba(55, 67, 34, 1);
-  border-radius: 2.5px;
-  box-sizing: border-box;
-  margin: 10px 0; /* Vertical margin between boxes */
-}
+    .div2 {
+        display: flex;
+        flex-direction: column; /* Stack the items vertically */
+        justify-content: space-between; /* Distribute items vertically with space between */
+        flex: 2; /* Allow div2 to take up more space */
+        margin-left: 20px; /* Space between div1 and div2 */
+    }
 
-button{
-height: fit-content;
-width:fit-content;    
-color: white;    
-background-color:rgba(55, 67, 34, 1) ; 
-text-align: center;   
-}
+    .div2 > div {
+        width: 100%; /* Make the width of each box 100% of the container */
+        height: 33.33%; /* Make each box take up 1/3 of the vertical space */
+        border: 5px solid rgba(55, 67, 34, 1);
+        border-radius: 2.5px;
+        box-sizing: border-box;
+        margin: 10px 0; /* Vertical margin between boxes */
+    }
 
-p{
- color: white;
- font-family: SourGummy;   
- text-align: center;
-}
+    button {
+        height: fit-content;
+        width: fit-content;    
+        color: white;    
+        background-color: rgba(55, 67, 34, 1); 
+        text-align: center;   
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 10px;
+    }
 
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
+    button:hover {
+        background-color: rgba(130, 146, 58, 1); /* Hover effect */
+    }
 
-/* Blinking cursor effect */
-@keyframes blink {
-  0%, 50% {
-    content: "_";
-  }
-  51%, 100% {
-    content: "";
-  }
-}
+    p {
+        color: white;
+        font-family: SourGummy;   
+        text-align: center;
+    }
 
-</style>
+    @keyframes typing {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    /* Blinking cursor effect */
+    @keyframes blink {
+        0%, 50% {
+            content: "_";
+        }
+        51%, 100% {
+            content: "";
+        }
+    }
+
+    </style>
 </head>
 
 <body>
 
 <div class="banner">
   <h1 class="logo">SMART SELECT</h1>
-  <img class="background" src="cottage core raspberry desktop wallpaper.jpg" alt="background">
+  <img class="background" src="images/cottage core raspberry desktop wallpaper.jpg" alt="background">
 </div>
 
 <h1 class="main-heading">Welcome To Smart Select!</h1>
@@ -179,30 +189,28 @@ p{
     <div class="div1-baby"></div>
   </div>
 
-  
   <div class="div2">
     <div class="pcf">
         <h1 class="sub-heading">How Do We Do It?</h1>
-        <p>A product carbon footprint (or PCF) is the calculation of all the greenhouse gas (GHG) emmisions 
-        generated in the supply chain of a specific product.This is the method we rely on for calculating the carbon emmsions to allow users to compare and make choices.</p>
-    <br>
-    <button a href="file:///C:/Users/POOJA/Desktop/taracodes/PCF/index.html">learn more about pcf!</button>
+        <p>A product carbon footprint (or PCF) is the calculation of all the greenhouse gas (GHG) emissions generated in the supply chain of a specific product. This is the method we rely on for calculating the carbon emissions to allow users to compare and make choices.</p>
+        <br>
+        <button onclick="window.location.href='PCF.html'">Learn more about PCF!</button>
     </div>
     
-    
     <div class="sources">
-        <h1 class="sub-heading">Where Do We get Our Data From?</h1>
-        <P>We rely on sources like<br>
-            
-      <button a href="">Global Disclosure System (CDP)</button><BR> 
-      <button>Open Government Data (OGD)</button> <BR> 
-      <button>other various sources</button></P></div>
-    
+        <h1 class="sub-heading">Where Do We Get Our Data From?</h1>
+        <p>We rely on sources like<br>
+            <button onclick="window.location.href='https://www.cdp.net/en'">Global Disclosure System (CDP)</button><br> 
+            <button onclick="window.location.href='https://www.data.gov/'">Open Government Data (OGD)</button><br> 
+            <button onclick="window.location.href='#'">Other Various Sources</button>
+        </p>
+    </div>
     
     <div class="whoarewe">
         <h1 class="sub-heading">Who Are We?</h1>
-        <p>Tara, Avni, Neha (The 3 highschoolers infront of you!)</p></div>
+        <p>Tara, Avni, Neha (The 3 highschoolers in front of you!)</p>
     </div>
+  </div>
 </div>
 
 </body>
