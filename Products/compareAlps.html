@@ -32,7 +32,7 @@
     }
 
     .banner {
-      background-image: url(cottage\ core\ raspberry\ desktop\ wallpaper\ copy\ 2.jpg);
+      background-image: url('images/cottage-core-raspberry.jpg'); /* Correct path to your banner image */
       width: 100%;
       height: fit-content;
       border: 5px solid rgba(55, 67, 34, 1);
@@ -85,15 +85,13 @@
       text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8); /* Light shadow for better contrast */
     }
 
-    button{
-height: fit-content;
-width:fit-content;    
-color: white;    
-background-color:rgba(55, 67, 34, 1) ; 
-text-align: center; 
-  
-}
-
+    button {
+      height: fit-content;
+      width: fit-content;
+      color: white;
+      background-color: rgba(55, 67, 34, 1);
+      text-align: center;
+    }
   </style>
 
   <!-- Chart.js CDN -->
@@ -107,7 +105,9 @@ text-align: center;
   </div>
 
   <header class="main-heading">Comparing Alps Soap</header>
-  <button a href="file:///C:/Users/POOJA/Desktop/taracodes/Comparision%20Data/product%7B1%7D.html">Learn More</button>  
+
+  <!-- Updated Learn More button with proper navigation -->
+  <button onclick="window.location.href='data/product{1}.html'">Learn More</button>
 
   <div class="container">
     <div class="chart-container">
@@ -115,8 +115,8 @@ text-align: center;
       <!-- Chart container -->
       <canvas id="carbonChart"></canvas>
     </div>
-    <!-- Image next to the chart -->
-    <img src="C:\Users\POOJA\Downloads\Alps soap.jpg" alt="Alps Soap Image">
+    <!-- Image next to the chart, updated to relative path -->
+    <img src="images/alps-soap.jpg" alt="Alps Soap Image"> <!-- Replace with correct image path -->
   </div>
 
   <script>
@@ -193,7 +193,6 @@ text-align: center;
         }
       }
     });
-
   </script>
 
 </body>
